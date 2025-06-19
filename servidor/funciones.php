@@ -1,5 +1,6 @@
 <?php /** @noinspection PhpUnusedLocalVariableInspection */
 /** @noinspection PhpRedundantOptionalArgumentInspection */
+
 (session_status() === PHP_SESSION_NONE ? session_start() : ''); // Iniciar la sesión de PHP si no está iniciada
 require 'dirs.php'; // Archivo que contiene las rutas de los directorios
 require_once(CLASS_PATH . 'conexion.php'); // Archivo que contiene la clase Conexion
