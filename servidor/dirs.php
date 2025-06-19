@@ -1,5 +1,5 @@
 <?php
-define("ROOT_PATH", $_SERVER['DOCUMENT_ROOT'] . '/eventos/');
+define("ROOT_PATH", $_SERVER['DOCUMENT_ROOT'] . '/');
 const CLASS_PATH = ROOT_PATH . 'clases/';
 const SERVER_PATH = ROOT_PATH . 'servidor/';
 const TEMPLATES_PATH = ROOT_PATH . 'templates/';

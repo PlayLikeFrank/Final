@@ -1,13 +1,13 @@
 <div id="wrapper">
     <nav class="navbar navbar-expand bg-light navigation-clean navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="inicio.php" style="font-family: 'Noto Serif Dogra', serif;font-size: 26px;font-weight: bold;">ADSO</a>
+            <a class="navbar-brand" href="index.php" style="font-family: 'Noto Serif Dogra', serif;font-size: 26px;font-weight: bold;">ADSO</a>
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"></button>
             <div class='collapse navbar-collapse' id='navcol-1'>
                 <ul class='navbar-nav ms-auto'>
                     <li class='nav-item' style='margin: 0 20px 0 0;'>
                         <a class="nav-link <?php $url = $_SERVER['REQUEST_URI'];
-                        if (str_contains($url, '/eventos/inicio.php') || $url == '/eventos/') echo 'active'; ?>" href='inicio.php' style="font-family: 'Noto Serif Dogra', serif; font-size: 16px; font-weight: bold;">Inicio</a>
+                        if (str_contains($url, '/eventos/inicio.php') || $url == '/eventos/') echo 'active'; ?>" href='index.php' style="font-family: 'Noto Serif Dogra', serif; font-size: 16px; font-weight: bold;">Inicio</a>
                     </li>
                     <?php if (isset($_SESSION['usuario_id'])) { ?><li class="nav-item" style="margin: 0 20px 0 0;">
                         <a class="nav-link <?php if (str_contains($url, '/eventos/novedades.php')) echo 'active'; ?>" href="novedades.php" style="font-family: 'Noto Serif Dogra', serif; font-size: 16px; font-weight: bold;">Novedades</a>
