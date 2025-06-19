@@ -1,7 +1,5 @@
 # Personalización de mensajes de error
 ErrorDocument 404 /index.php
-ErrorDocument 403 /403.html
-ErrorDocument 500 /500.html
 
 # Guardar registro de errores en un archivo
 php_flag log_errors on

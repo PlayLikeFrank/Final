@@ -3,7 +3,7 @@
         <footer class="bg-white sticky-footer">
             <div class="container my-auto">
                 <div class="text-center my-auto">
-                    <span>Derechos de autor © 2023 ADSO</span>
+                    <span>Derechos de autor © 2025 FRANCISCO JAVIER VARGAS CONEJO</span>
                 </div>
             </div>
         </footer>

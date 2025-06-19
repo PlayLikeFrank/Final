@@ -16,15 +16,15 @@ CREATE TABLE usuarios
     Correo            VARCHAR(150)                       NOT NULL UNIQUE,
     Clave             CHAR(60)                           NOT NULL,
     Fecha_De_Registro DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    PRIMARY KEY (ID_Usuario),
+   PRIMARY KEY (ID_Usuario),
     INDEX idx_usuarios_correo (Correo)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_general_ci;
 
 -- Disparador para el código de usuario
-DELIMITER
-$$
+DELIMITER //
+
 CREATE TRIGGER Cod_Usuario
     BEFORE INSERT
     ON usuarios
@@ -38,7 +38,7 @@ BEGIN
     SET
         NEW.Cod_Usuario = CONCAT('COD-', LPAD(next_val, 5, '0'));
 END;
-$$
+//
 DELIMITER ;
 
 -- Tabla de eventos

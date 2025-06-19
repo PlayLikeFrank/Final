@@ -1,21 +1,21 @@
 services:
   www:
     build: .
+    container_name: php_web
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      #- ./:/var/www/html
       - ./:/var/www/html
-      #- ./apache-logs:/var/log/apache2
     depends_on:
       - db
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASSWORD: ejemplo_root
+      DB_PASSWORD: pass
       DB_NAME: eventos
       DB_PORT: 3306  
+
   db:
     image: mariadb:latest
     expose:
@@ -23,11 +23,12 @@ services:
     environment:
       MYSQL_DATABASE: eventos
       MYSQL_USER: usuario
-      MYSQL_PASSWORD: contraseña
-      MYSQL_ROOT_PASSWORD: ejemplo_root
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass
     volumes:      
       - ./database:/docker-entrypoint-initdb.d
       - ./mysql-data:/var/lib/mysql
+
   phpmyadmin:
     image: phpmyadmin:latest
     depends_on:
@@ -36,5 +37,5 @@ services:
       - "8080:80"
     environment:
       MYSQL_USER: usuario
-      MYSQL_PASSWORD: contraseña
-      MYSQL_ROOT_PASSWORD: ejemplo_root
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass

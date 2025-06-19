@@ -1,3 +1,4 @@
+ 
 <?php
 require_once 'servidor/funciones.php'; // Archivo que contiene las funciones del usuario
 ?>
